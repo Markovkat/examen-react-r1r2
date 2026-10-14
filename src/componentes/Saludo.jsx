@@ -4,7 +4,6 @@ export function Saludo() {
   const { idioma, cambiarIdioma, textos } = useIdioma();
 
   const handleToggle = () => {
-    // pequeño fallo: comparacion debil == y falta de validacion
     cambiarIdioma(idioma == 'es' ? 'en' : 'es');
   };
 

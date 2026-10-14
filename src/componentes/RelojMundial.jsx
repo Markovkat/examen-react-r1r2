@@ -13,8 +13,6 @@ export function RelojMundial() {
   );
 
   useEffect(() => {
-    // pequeño detalle: se nos olvidó actualizar la hora justo al cambiar de zona
-    // y tarda 1 segundo en actualizarse con el intervalo
     const intervalo = setInterval(() => {
       setHora(new Date().toLocaleTimeString('es-MX', { timeZone: zona }));
     }, 1000);
@@ -26,7 +24,7 @@ export function RelojMundial() {
 
   useEffect(() => {
     document.title = `${hora} - ${zona}`;
-  }, [hora]); // falta zona en las dependencias
+  }, [hora]);
 
   return (
     <div>

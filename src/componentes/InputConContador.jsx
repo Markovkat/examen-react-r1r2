@@ -3,7 +3,6 @@ import { useState, useRef } from 'react';
 export function InputConContador() {
   const [texto, setTexto] = useState('');
   const inputRef = useRef(null);
-  // pequeño fallo: empieza en 1 en vez de 0, asi que en el primer render marca 2
   const contadorRenders = useRef(1);
 
   contadorRenders.current += 1;
