@@ -29,7 +29,7 @@ const canciones = [
   {
     id: 'cancion-4',
     titulo: 'Rayando el Sol',
-    artista: 'Maná',
+    artista: 'Mana',
     favorita: true,
   },
 ];

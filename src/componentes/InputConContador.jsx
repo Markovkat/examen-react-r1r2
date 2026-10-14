@@ -3,7 +3,8 @@ import { useState, useRef } from 'react';
 export function InputConContador() {
   const [texto, setTexto] = useState('');
   const inputRef = useRef(null);
-  const contadorRenders = useRef(0);
+  // pequeño fallo: empieza en 1 en vez de 0, asi que en el primer render marca 2
+  const contadorRenders = useRef(1);
 
   contadorRenders.current += 1;
 
@@ -19,15 +20,15 @@ export function InputConContador() {
           type="text"
           value={texto}
           onChange={(e) => setTexto(e.target.value)}
-          placeholder="Escribe aquí..."
+          placeholder="Escribe aqui..."
         />
-        <button type="button" onClick={enfocarInput}>
+        <button onClick={enfocarInput}>
           Enfocar
         </button>
       </div>
 
-      <p>Cantidad de caracteres: {texto.length}</p>
-      <p>Número de renders: {contadorRenders.current}</p>
+      <p>Numero de caracteres: {texto.length}</p>
+      <p>Numero de renders: {contadorRenders.current}</p>
     </div>
   );
 }

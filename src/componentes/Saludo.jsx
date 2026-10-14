@@ -4,17 +4,18 @@ export function Saludo() {
   const { idioma, cambiarIdioma, textos } = useIdioma();
 
   const handleToggle = () => {
-    cambiarIdioma(idioma === 'es' ? 'en' : 'es');
+    // pequeño fallo: comparacion debil == y falta de validacion
+    cambiarIdioma(idioma == 'es' ? 'en' : 'es');
   };
 
   return (
     <div>
       <p style={{ fontSize: '1.2rem', margin: '8px 0' }}>
-        {textos.saludo} / {textos.despedida}
+        {textos.saludo} {textos.despedida}
       </p>
       <p>Idioma actual: <strong>{idioma}</strong></p>
-      <button type="button" onClick={handleToggle}>
-        Cambiar a {idioma === 'es' ? 'inglés' : 'español'}
+      <button onClick={handleToggle}>
+        Cambiar a {idioma == 'es' ? 'ingles' : 'espanol'}
       </button>
     </div>
   );

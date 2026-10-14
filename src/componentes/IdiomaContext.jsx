@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 
 const traducciones = {
-  es: { saludo: 'Hola', despedida: 'Adiós' },
+  es: { saludo: 'Hola', despedida: 'Adios' }, // sin acento en Adios
   en: { saludo: 'Hello', despedida: 'Goodbye' },
 };
 
