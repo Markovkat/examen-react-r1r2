@@ -1,0 +1,125 @@
+:root {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light dark;
+  --borde: #ccc;
+  --gris: #9e9e9e;
+  --acento: #1db954;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.ejercicio {
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--borde);
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input,
+select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--borde);
+  font: inherit;
+}
+
+/* Ejercicio 1 */
+.lista-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tarjeta {
+  width: 160px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tarjeta-portada {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.tarjeta-sin-portada {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--gris);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-info {
+  padding: 0.5rem;
+}
+
+.tarjeta-info h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.tarjeta-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Ejercicio 2 */
+.playlist {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.playlist li span {
+  flex: 1;
+}
+
+.boton-favorita-activa {
+  background: gold;
+  color: #000;
+}
+
+/* Ejercicio 3 */
+.hora {
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
+  margin: 0.5rem 0;
+}
